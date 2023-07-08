@@ -1,0 +1,307 @@
+/* Grilla base*/
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-gap: $grid-gap;
+    display: grid;
+}
+
+.layout__nav {
+    background-color: $color-primary;
+    color: $color-text;
+    border-bottom: 1px solid $color-text;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 10px;
+    box-shadow: $box-shadow;
+}
+
+/*Para poner un logo y su texto*/
+.layout__logo {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+}
+
+.layout__logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.layout__logo h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-left: 10px; 
+    color: $color-text-tertiary;
+    text-shadow: 0 0 5px white; 
+}
+
+.layout__nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+/* separar un poco*/
+.layout__nav li {
+    margin-left: $grid-gap;
+}
+
+.layout__header {
+    background-color: $color-secondary;
+    color: $color-text;
+    border-bottom: 1px solid $color-text;
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-height: 410px;
+}
+
+/* Estilos base para las imágenes del carrusel */
+.img-carousel {
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+/* Media query para pantallas grandes */
+@media screen and (min-width: 1025px) {
+    .img-carousel {
+        max-height: 380px;
+    }
+}
+
+.layout__main {
+    background-color: $color-primary;
+    color: $color-text;
+    border-bottom: 1px solid $color-text;
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-height: 410px;
+    box-shadow: $box-shadow;
+}
+
+/* Pilares */
+.layout__aside {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $grid-gap;
+    background-color: $color-primary;
+    border-radius: 5%;
+    padding: $grid-gap;
+    margin-bottom: 5%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    box-shadow: $box-shadow;
+}
+
+.pilar {
+    text-align: center;
+    background-color: $color-secondary;
+    border-radius: 5%;
+    padding: $grid-gap;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    box-shadow: $box-shadow;
+}
+
+.pilar img {
+    width: 90%;
+    border-radius: 5%;
+    border: 5px solid #ffffff;
+}
+
+/* Media Query para una columna hasta los 768 se usa esto de aqui*/
+@media screen and (max-width: 768px) {
+    .layout__aside {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: $grid-gap;
+        padding: $grid-gap;
+    }
+
+    .pilar {
+        display: grid;
+        align-items: center;
+        gap: $grid-gap;
+        padding: $grid-gap;
+    }
+
+    .pilar img {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+    }
+
+    .pilar h3 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .pilar p {
+        text-align: right;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .pilar a {
+        text-align: right;
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+
+/* Sabias que*/
+.sabias-que {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin: $grid-gap 0;
+    background-color: $color-primary;
+    border-radius: 1%;
+    padding: $grid-gap;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    margin: 2%;
+    box-shadow: $box-shadow;
+}
+.sabias-que__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: $grid-gap;
+    color: $color-text-tertiary;
+}
+.sabias-que__image {
+    width: 100%;
+    border-radius: 5%;
+    border: 5px solid #ffffff;
+}
+
+.sabias-que__text {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+    color: $color-text;
+}
+
+/* en 768 cambia a 2 columnas 2 lineas*/
+@media screen and (min-width: 768px) {
+    .sabias-que {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: $grid-gap;
+        padding: $paddings;
+    }
+
+    .sabias-que__image {
+        width: 100%;
+        grid-column: 1;
+        grid-row: 1 / span 3;
+    }
+
+    .sabias-que__title {
+        font-size: 18px;
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .sabias-que__text {
+        margin: 5px 0;
+        text-align: right;
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+/* Media Query para una columna desde 1130 se usa esto de aqui*/
+@media screen and (min-width: 1130px) {
+    .sabias-que__title {
+        font-size: 18px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+/* Footer */
+.layout__footer {
+    background-color: $color-primary;
+    padding: $paddings;
+    color: $color-text;
+    display: grid;
+    gap: $grid-gap;
+    grid-template-columns: repeat(1, 1fr);
+    box-shadow: $box-shadow;
+}
+
+.layout__footer-hechopor {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: $grid-gap;
+}
+
+.layout__footer-title{
+    text-align: center;
+    font-weight: bold;
+    margin: $grid-gap;
+    font-size: 4vh;
+}
+
+.layout__footer-enlaces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $grid-gap;
+    background-color: $color-primary;
+    border-radius: 5%;
+    padding: $paddings;
+    margin-bottom: 5%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.layout__footer-enlaces a {
+    text-decoration: none;
+    color: $color-text;
+    font-size: 20px;
+    font-weight: bold;
+    margin: $grid-gap;
+}
+
+.layout__footer-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: $color-primary;
+}
+
+.layout__footer-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 5%;
+    list-style: none; 
+}
+
+/* Media Query para pantallas con un ancho mínimo de 768px */
+@media screen and (min-width: 768px) {
+    .layout__footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .layout__footer-enlaces {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .layout__footer-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

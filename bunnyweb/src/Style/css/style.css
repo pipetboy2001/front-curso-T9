@@ -1,0 +1,352 @@
+@charset "UTF-8";
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+
+h3 {
+  margin-top: 10%;
+  color: #444444;
+  font-size: 100%;
+}
+
+a {
+  color: #444444;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #333333;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Grilla base*/
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  display: grid;
+}
+
+.layout__nav {
+  background-color: #F7B3C2;
+  color: #444444;
+  border-bottom: 1px solid #444444;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/*Para poner un logo y su texto*/
+.layout__logo {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+}
+
+.layout__logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.layout__logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #000000;
+  text-shadow: 0 0 5px white;
+}
+
+.layout__nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+/* separar un poco*/
+.layout__nav li {
+  margin-left: 20px;
+}
+
+.layout__header {
+  background-color: #A6C8E7;
+  color: #444444;
+  border-bottom: 1px solid #444444;
+  display: grid;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  max-height: 410px;
+}
+
+/* Estilos base para las imágenes del carrusel */
+.img-carousel {
+  width: 100%;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+/* Media query para pantallas grandes */
+@media screen and (min-width: 1025px) {
+  .img-carousel {
+    max-height: 380px;
+  }
+}
+.layout__main {
+  background-color: #F7B3C2;
+  color: #444444;
+  border-bottom: 1px solid #444444;
+  display: grid;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  max-height: 410px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Pilares */
+.layout__aside {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #F7B3C2;
+  border-radius: 5%;
+  padding: 20px;
+  margin-bottom: 5%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.pilar {
+  text-align: center;
+  background-color: #A6C8E7;
+  border-radius: 5%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.pilar img {
+  width: 90%;
+  border-radius: 5%;
+  border: 5px solid #ffffff;
+}
+
+/* Media Query para una columna hasta los 768 se usa esto de aqui*/
+@media screen and (max-width: 768px) {
+  .layout__aside {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  .pilar {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .pilar img {
+    grid-column: 1;
+    grid-row: 1/span 3;
+  }
+  .pilar h3 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .pilar p {
+    text-align: right;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .pilar a {
+    text-align: right;
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+/* Sabias que*/
+.sabias-que {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin: 20px 0;
+  background-color: #F7B3C2;
+  border-radius: 1%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  margin: 2%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.sabias-que__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px;
+  color: #000000;
+}
+
+.sabias-que__image {
+  width: 100%;
+  border-radius: 5%;
+  border: 5px solid #ffffff;
+}
+
+.sabias-que__text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  color: #444444;
+}
+
+/* en 768 cambia a 2 columnas 2 lineas*/
+@media screen and (min-width: 768px) {
+  .sabias-que {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 10px;
+  }
+  .sabias-que__image {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1/span 3;
+  }
+  .sabias-que__title {
+    font-size: 18px;
+    grid-column: 1/span 3;
+    grid-row: 1;
+  }
+  .sabias-que__text {
+    margin: 5px 0;
+    text-align: right;
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+/* Media Query para una columna desde 1130 se usa esto de aqui*/
+@media screen and (min-width: 1130px) {
+  .sabias-que__title {
+    font-size: 18px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+/* Footer */
+.layout__footer {
+  background-color: #F7B3C2;
+  padding: 10px;
+  color: #444444;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.layout__footer-hechopor {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.layout__footer-title {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px;
+  font-size: 4vh;
+}
+
+.layout__footer-enlaces {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #F7B3C2;
+  border-radius: 5%;
+  padding: 10px;
+  margin-bottom: 5%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.layout__footer-enlaces a {
+  text-decoration: none;
+  color: #444444;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.layout__footer-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #F7B3C2;
+}
+
+.layout__footer-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 5%;
+  list-style: none;
+}
+
+/* Media Query para pantallas con un ancho mínimo de 768px */
+@media screen and (min-width: 768px) {
+  .layout__footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .layout__footer-enlaces {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .layout__footer-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #444444;
+  color: #B2D8C2;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #F7B3C2;
+  color: #444444;
+}
+
+/*# sourceMappingURL=style.css.map */
