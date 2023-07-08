@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
-import Header from './Components/Header';
-import Main from './Components/Main';
-import Aside from './Components/Aside';
-import DidYouKnow from './Components/DidYouKnow';
-import Footer from './Components/Footer';
+import Header from './Components/HeaderPage';
+import Main from './Components/MainPage';
+import Aside from './Components/AsidePilares';
+import DidYouKnow from './Components/YouKnow';
+import Footer from './Components/FooterPage';
 import './Style/style.scss'
 
 function App() {
