@@ -1,10 +1,11 @@
 import React from 'react';
+import ConejoKnow from './../Assets/HD-wallpaper-cute-rabbit-standing-cute-rabbit.jpg';
 
 function DidYouKnow() {
     return (
         <div className="sabias-que">
             <h2 className="sabias-que__title">Sabías que...</h2>
-            <img className="sabias-que__image" src="./Assests/HD-wallpaper-cute-rabbit-standing-cute-rabbit.jpg" alt="" width="200" />
+            <img className="sabias-que__image" src={ConejoKnow} alt="" width="200" />
             <p className="sabias-que__text">
                 Sabías que los dientes de los conejos nunca dejan de crecer a lo largo de toda su
                 vida? Esto se debe a que necesitan desgastar constantemente sus dientes para mantenerlos a una longitud

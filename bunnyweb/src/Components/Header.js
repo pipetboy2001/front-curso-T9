@@ -21,10 +21,6 @@ function Header() {
                         <img src="https://i0.wp.com/lavozdigitalpr.com/wp-content/uploads/2021/03/Conejito-con-un-pollito.jpg?fit=1140%2C560&ssl=1"
                             class="d-block w-100 img-carousel" alt="conejito 4" width="200px"/>
                     </div>
-                    <div class="carousel-item">
-                        <img src="./Assests/pazuconejo.jpg" class="d-block w-100 img-carousel" alt="conejito 4"
-                            width="200px"/>
-                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                     data-bs-slide="prev">
