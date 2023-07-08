@@ -5,7 +5,7 @@ import Main from './Components/Main';
 import Aside from './Components/Aside';
 import DidYouKnow from './Components/DidYouKnow';
 import Footer from './Components/Footer';
-import './Style/css/style.css'
+import './Style/style.scss'
 
 function App() {
   return (
